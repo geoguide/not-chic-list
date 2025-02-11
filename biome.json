@@ -1,0 +1,71 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.6.4/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "semicolons": "asNeeded",
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "trailingCommas": "all",
+      "lineWidth": 100
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "lineWidth": 100,
+      "trailingCommas": "all"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noExplicitAny": "warn",
+        "noConsoleLog": "error",
+        "useAwait": "error"
+      },
+      "complexity": {
+        "noBannedTypes": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "error",
+        "noUnusedVariables": "error",
+        "useHookAtTopLevel": "error",
+        "noUnusedImports": "error"
+      },
+      "a11y": {
+        "useKeyWithClickEvents": "off"
+      },
+      "style": {
+        "useBlockStatements": "off",
+        "useConsistentArrayType": "error",
+        "useFragmentSyntax": "error",
+        "useShorthandArrayType": "error",
+        "useImportType": "warn",
+        "noUnusedTemplateLiteral": "warn",
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": false,
+            "requireAscii": true,
+            "filenameCases": [
+              "PascalCase",
+              "camelCase",
+              "export"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "formatter": {
+    "ignore": [
+      "src/types/database.types.ts"
+    ]
+  }
+}
